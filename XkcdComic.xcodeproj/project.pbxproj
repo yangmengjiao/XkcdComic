@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4B4B158D26CC69130042F22A /* XkcdComicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B158C26CC69130042F22A /* XkcdComicApp.swift */; };
-		4B4B158F26CC69130042F22A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B158E26CC69130042F22A /* ContentView.swift */; };
+		4B4B158F26CC69130042F22A /* ComicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B158E26CC69130042F22A /* ComicView.swift */; };
 		4B4B159126CC691E0042F22A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B159026CC691E0042F22A /* Assets.xcassets */; };
 		4B4B159426CC691E0042F22A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B159326CC691E0042F22A /* Preview Assets.xcassets */; };
 		4B4B159F26CC691F0042F22A /* XkcdComicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B159E26CC691F0042F22A /* XkcdComicTests.swift */; };
 		4B4B15AA26CC691F0042F22A /* XkcdComicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15A926CC691F0042F22A /* XkcdComicUITests.swift */; };
 		4B4B15BC26CC69610042F22A /* NetworkingEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 4B4B15BB26CC69610042F22A /* NetworkingEngine */; };
 		4B4B15C226CC69850042F22A /* AsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4B4B15C126CC69850042F22A /* AsyncImage */; };
+		4B4B15C926CC6A400042F22A /* ComicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15C826CC6A400042F22A /* ComicData.swift */; };
+		4B4B15D126CC6A5D0042F22A /* ComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15D026CC6A5D0042F22A /* ComicModel.swift */; };
+		4B4B15DA26CC6C650042F22A /* XkcdEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15D926CC6C650042F22A /* XkcdEndpoint.swift */; };
+		4B4B15E426CC6CC10042F22A /* ComicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15E326CC6CC10042F22A /* ComicViewModel.swift */; };
+		4B4B15ED26CC71CC0042F22A /* XkcdComicConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15EC26CC71CC0042F22A /* XkcdComicConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,7 @@
 /* Begin PBXFileReference section */
 		4B4B158926CC69130042F22A /* XkcdComic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XkcdComic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4B158C26CC69130042F22A /* XkcdComicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XkcdComicApp.swift; sourceTree = "<group>"; };
-		4B4B158E26CC69130042F22A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B4B158E26CC69130042F22A /* ComicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicView.swift; sourceTree = "<group>"; };
 		4B4B159026CC691E0042F22A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B4B159326CC691E0042F22A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B4B159526CC691E0042F22A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		4B4B15A526CC691F0042F22A /* XkcdComicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XkcdComicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4B15A926CC691F0042F22A /* XkcdComicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XkcdComicUITests.swift; sourceTree = "<group>"; };
 		4B4B15AB26CC691F0042F22A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B4B15C826CC6A400042F22A /* ComicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicData.swift; sourceTree = "<group>"; };
+		4B4B15D026CC6A5D0042F22A /* ComicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicModel.swift; sourceTree = "<group>"; };
+		4B4B15D926CC6C650042F22A /* XkcdEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XkcdEndpoint.swift; sourceTree = "<group>"; };
+		4B4B15E326CC6CC10042F22A /* ComicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicViewModel.swift; sourceTree = "<group>"; };
+		4B4B15EC26CC71CC0042F22A /* XkcdComicConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XkcdComicConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,11 @@
 		4B4B158B26CC69130042F22A /* XkcdComic */ = {
 			isa = PBXGroup;
 			children = (
-				4B4B158C26CC69130042F22A /* XkcdComicApp.swift */,
-				4B4B158E26CC69130042F22A /* ContentView.swift */,
+				4B4B15EB26CC71B60042F22A /* Supporting Files */,
+				4B4B15E226CC6CB70042F22A /* ViewModel */,
+				4B4B15E126CC6CAC0042F22A /* Views */,
+				4B4B15D826CC6C410042F22A /* Networking */,
+				4B4B15C626CC6A090042F22A /* DataLayer */,
 				4B4B159026CC691E0042F22A /* Assets.xcassets */,
 				4B4B159526CC691E0042F22A /* Info.plist */,
 				4B4B159226CC691E0042F22A /* Preview Content */,
@@ -132,6 +145,56 @@
 				4B4B15AB26CC691F0042F22A /* Info.plist */,
 			);
 			path = XkcdComicUITests;
+			sourceTree = "<group>";
+		};
+		4B4B15C626CC6A090042F22A /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4B4B15D026CC6A5D0042F22A /* ComicModel.swift */,
+				4B4B15C726CC6A350042F22A /* Data */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		4B4B15C726CC6A350042F22A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4B4B15C826CC6A400042F22A /* ComicData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4B4B15D826CC6C410042F22A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4B4B15D926CC6C650042F22A /* XkcdEndpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4B4B15E126CC6CAC0042F22A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B4B158E26CC69130042F22A /* ComicView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B4B15E226CC6CB70042F22A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B4B15E326CC6CC10042F22A /* ComicViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B4B15EB26CC71B60042F22A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B4B158C26CC69130042F22A /* XkcdComicApp.swift */,
+				4B4B15EC26CC71CC0042F22A /* XkcdComicConstants.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +334,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B4B158F26CC69130042F22A /* ContentView.swift in Sources */,
+				4B4B15E426CC6CC10042F22A /* ComicViewModel.swift in Sources */,
+				4B4B15C926CC6A400042F22A /* ComicData.swift in Sources */,
+				4B4B158F26CC69130042F22A /* ComicView.swift in Sources */,
+				4B4B15ED26CC71CC0042F22A /* XkcdComicConstants.swift in Sources */,
 				4B4B158D26CC69130042F22A /* XkcdComicApp.swift in Sources */,
+				4B4B15D126CC6A5D0042F22A /* ComicModel.swift in Sources */,
+				4B4B15DA26CC6C650042F22A /* XkcdEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
