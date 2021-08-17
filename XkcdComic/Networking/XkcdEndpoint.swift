@@ -8,10 +8,7 @@
 import Foundation
 import NetworkingEngine
 
-/// Endpoint for Xkcd Website
-/// Can add more cases in the future.
-///
-
+/// XkcdEndpoint's  Constants
 enum XkcdEndpointConstant {
     static let https = "https"
     static let defaultBaseURL = "xkcd.com"
@@ -19,6 +16,9 @@ enum XkcdEndpointConstant {
     static let get = "GET"
 }
 
+/// Endpoint for Xkcd Website
+/// Can add more cases in the future.
+///
 enum XkcdEndpoint: Endpoint {
     case getComicWith(index: Int)
     case getCurrentComit
