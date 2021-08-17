@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		4B4B159426CC691E0042F22A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4B159326CC691E0042F22A /* Preview Assets.xcassets */; };
 		4B4B159F26CC691F0042F22A /* XkcdComicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B159E26CC691F0042F22A /* XkcdComicTests.swift */; };
 		4B4B15AA26CC691F0042F22A /* XkcdComicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15A926CC691F0042F22A /* XkcdComicUITests.swift */; };
+		4B4B15BC26CC69610042F22A /* NetworkingEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 4B4B15BB26CC69610042F22A /* NetworkingEngine */; };
+		4B4B15C226CC69850042F22A /* AsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4B4B15C126CC69850042F22A /* AsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4B15BC26CC69610042F22A /* NetworkingEngine in Frameworks */,
+				4B4B15C226CC69850042F22A /* AsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,10 @@
 			dependencies = (
 			);
 			name = XkcdComic;
+			packageProductDependencies = (
+				4B4B15BB26CC69610042F22A /* NetworkingEngine */,
+				4B4B15C126CC69850042F22A /* AsyncImage */,
+			);
 			productName = XkcdComic;
 			productReference = 4B4B158926CC69130042F22A /* XkcdComic.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +225,10 @@
 				Base,
 			);
 			mainGroup = 4B4B158026CC69130042F22A;
+			packageReferences = (
+				4B4B15BA26CC69610042F22A /* XCRemoteSwiftPackageReference "NetworkingEngine" */,
+				4B4B15C026CC69850042F22A /* XCRemoteSwiftPackageReference "AsyncImage" */,
+			);
 			productRefGroup = 4B4B158A26CC69130042F22A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -580,6 +592,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B4B15BA26CC69610042F22A /* XCRemoteSwiftPackageReference "NetworkingEngine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yangmengjiao/NetworkingEngine.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		4B4B15C026CC69850042F22A /* XCRemoteSwiftPackageReference "AsyncImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yangmengjiao/AsyncImage.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B4B15BB26CC69610042F22A /* NetworkingEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B4B15BA26CC69610042F22A /* XCRemoteSwiftPackageReference "NetworkingEngine" */;
+			productName = NetworkingEngine;
+		};
+		4B4B15C126CC69850042F22A /* AsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B4B15C026CC69850042F22A /* XCRemoteSwiftPackageReference "AsyncImage" */;
+			productName = AsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B4B158126CC69130042F22A /* Project object */;
 }
