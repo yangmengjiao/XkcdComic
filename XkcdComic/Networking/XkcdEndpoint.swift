@@ -19,9 +19,9 @@ enum XkcdEndpointConstant {
 /// Endpoint for Xkcd Website
 /// Can add more cases in the future.
 ///
-enum XkcdEndpoint: Endpoint {
+enum XkcdEndpoint: EndpointProtocol {
     case getComicWith(index: Int)
-    case getCurrentComit
+    case getCurrentComic
     var scheme: String {
         switch self {
         default:
@@ -40,7 +40,7 @@ enum XkcdEndpoint: Endpoint {
         switch self {
         case .getComicWith(let index):
             return "/\(index)\(XkcdEndpointConstant.defaultPath)"
-        case .getCurrentComit:
+        case .getCurrentComic:
             return XkcdEndpointConstant.defaultBaseURL
         }
     }
