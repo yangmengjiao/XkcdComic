@@ -41,7 +41,7 @@ enum XkcdEndpoint: EndpointProtocol {
         case .getComicWith(let index):
             return "/\(index)\(XkcdEndpointConstant.defaultPath)"
         case .getCurrentComic:
-            return XkcdEndpointConstant.defaultBaseURL
+            return XkcdEndpointConstant.defaultPath
         }
     }
     
