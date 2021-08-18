@@ -13,12 +13,24 @@ struct ComicView: View {
     
     var body: some View {
         VStack {
-            if let link = URL(string: viewModel.comicModel?.img ?? "") {
+            
+            Text(viewModel.getComicTitle())
+                .fontWeight(.bold)
+                .font(.title)
+            
+            
+            if let link = viewModel.getComicImageUrl() {
                 AsyncImageView(url: link)
             }
             
-            Button(XkcdComicConstants.ButtonName.pre) {
-                viewModel.loadPrev()
+            HStack {
+                Button(XkcdComicConstants.ButtonName.pre) {
+                    viewModel.loadPrev()
+                }
+              
+                Button(XkcdComicConstants.ButtonName.next) {
+                    viewModel.loadNext()
+                }
             }
         }.onAppear {
             viewModel.loadCurrent()

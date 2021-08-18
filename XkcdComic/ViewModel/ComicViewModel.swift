@@ -16,12 +16,32 @@ class ComicViewModel: ObservableObject {
     
     var currentComicIndex = XkcdComicConstants.maxComicIndex
     
+    func getComicTitle() -> String {
+        return comicModel?.title ?? ""
+    }
+    
+    func getComicImageUrl() -> URL? {
+        guard let url = URL(string: comicModel?.img ?? "") else{
+            return nil
+        }
+        return url
+    }
+    
     /// Load previous comic
     func loadPrev(_ networkingEngineProtocol: NetWorkingEngineProtocol.Type = NetWorkingEngine.self) {
         guard currentComicIndex > 1 else {
             return
         }
         currentComicIndex -= 1
+        self.loadComic(endpoint: .getComicWith(index: currentComicIndex), networkingEngineProtocol)
+    }
+    
+    /// Load next comic
+    func loadNext(_ networkingEngineProtocol: NetWorkingEngineProtocol.Type = NetWorkingEngine.self) {
+        guard currentComicIndex < XkcdComicConstants.maxComicIndex else {
+            return
+        }
+        currentComicIndex += 1
         self.loadComic(endpoint: .getComicWith(index: currentComicIndex), networkingEngineProtocol)
     }
     

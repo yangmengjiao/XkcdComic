@@ -19,20 +19,42 @@ class ComicViewModelTests: XCTestCase {
         viewModel = nil
     }
     
+    func testGetComicTitle() {
+        self.loadComicSuccesss()
+        
+        let expectTitle = viewModel.getComicTitle()
+        XCTAssertEqual(expectTitle, MockResponseData.comicData.title)
+        
+    }
+    
+    func testGetComicImageUrl() {
+        self.loadComicSuccesss()
+        
+        let expectURL = viewModel.getComicImageUrl()
+        XCTAssertEqual(expectURL, URL(string: MockResponseData.comicData.img ?? ""))
+        
+    }
+    
     func testLoadCurrent() {
         viewModel.loadCurrent(MockNetWorkingEngine.self)
         XCTAssertEqual(viewModel.currentComicIndex,2000)
     }
     
     func testLoadPrev() {
+        viewModel.currentComicIndex = 1000
         viewModel.loadPrev(MockNetWorkingEngine.self)
-        XCTAssertEqual(viewModel.currentComicIndex,1999)
+        XCTAssertEqual(viewModel.currentComicIndex,999)
+    }
+    
+    func testLoadNext() {
+        viewModel.currentComicIndex = 1000
+        viewModel.loadNext(MockNetWorkingEngine.self)
+        XCTAssertEqual(viewModel.currentComicIndex,1001)
     }
     
    
     func testLoadComicSuccesss() {
-        MockNetWorkingEngine.successFlag = true
-        viewModel.loadComic(endpoint: .getComicWith(index: 2000), MockNetWorkingEngine.self)
+        self.loadComicSuccesss()
         
         XCTAssertNotNil(viewModel.comicModel)
         
@@ -47,5 +69,12 @@ class ComicViewModelTests: XCTestCase {
         
         viewModel.loadComic(endpoint: .getComicWith(index: 2000), MockNetWorkingEngine.self)
         XCTAssertNil(viewModel.comicModel)
+    }
+    
+    //MARK：- Helper Method
+    
+    private func loadComicSuccesss() {
+        MockNetWorkingEngine.successFlag = true
+        viewModel.loadComic(endpoint: .getComicWith(index: 2000), MockNetWorkingEngine.self)
     }
 }
