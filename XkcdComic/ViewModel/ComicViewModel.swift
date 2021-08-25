@@ -13,6 +13,7 @@ import NetworkingEngine
 class ComicViewModel: ObservableObject {
     @Published var comicModel: ComicModel?
     @Published var shouldShowIndicator = true
+    @EnvironmentObject var errorHandling: ErrorHandling
     
     var currentComicIndex = XkcdComicConstants.maxComicIndex
     
@@ -37,9 +38,9 @@ class ComicViewModel: ObservableObject {
     }
     
     /// Load next comic
-    func loadNext(_ networkingEngineProtocol: NetWorkingEngineProtocol.Type = NetWorkingEngine.self) {
+    func loadNext(_ networkingEngineProtocol: NetWorkingEngineProtocol.Type = NetWorkingEngine.self) throws {
         guard currentComicIndex < XkcdComicConstants.maxComicIndex else {
-            return
+            throw ValidationError.maxComicIndexError
         }
         currentComicIndex += 1
         self.loadComic(endpoint: .getComicWith(index: currentComicIndex), networkingEngineProtocol)
@@ -68,3 +69,13 @@ class ComicViewModel: ObservableObject {
     }
 }
 
+enum ValidationError: LocalizedError {
+    case maxComicIndexError
+
+    var errorDescription: String? {
+        switch self {
+        case .maxComicIndexError:
+            return "There is not more comic, pleae go back."
+        }
+    }
+}

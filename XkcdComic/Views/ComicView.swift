@@ -10,6 +10,7 @@ import AsyncImage
 
 struct ComicView: View {
     @ObservedObject var viewModel = ComicViewModel()
+    @EnvironmentObject var errorHandling: ErrorHandling
     
     var body: some View {
         VStack {
@@ -29,8 +30,14 @@ struct ComicView: View {
                 }
               
                 Button(XkcdComicConstants.ButtonName.next) {
-                    viewModel.loadNext()
+                    do {
+                        try viewModel.loadNext()
+                    } catch {
+                        self.errorHandling.handle(error: error)
+                    }
                 }
+                
+              
             }
         }.onAppear {
             viewModel.loadCurrent()

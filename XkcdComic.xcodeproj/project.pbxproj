@@ -22,6 +22,7 @@
 		4B4B15ED26CC71CC0042F22A /* XkcdComicConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15EC26CC71CC0042F22A /* XkcdComicConstants.swift */; };
 		4B4B15FD26CC8DE40042F22A /* MockNetWorkingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B15FC26CC8DE40042F22A /* MockNetWorkingEngine.swift */; };
 		4B4B160826CC8F060042F22A /* MockResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4B160726CC8F060042F22A /* MockResponseData.swift */; };
+		4BD1817B26D5B00800DC16F0 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD1817A26D5B00800DC16F0 /* ErrorAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		4B4B15EC26CC71CC0042F22A /* XkcdComicConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XkcdComicConstants.swift; sourceTree = "<group>"; };
 		4B4B15FC26CC8DE40042F22A /* MockNetWorkingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetWorkingEngine.swift; sourceTree = "<group>"; };
 		4B4B160726CC8F060042F22A /* MockResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponseData.swift; sourceTree = "<group>"; };
+		4BD1817A26D5B00800DC16F0 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				4B4B158C26CC69130042F22A /* XkcdComicApp.swift */,
 				4B4B15EC26CC71CC0042F22A /* XkcdComicConstants.swift */,
+				4BD1817A26D5B00800DC16F0 /* ErrorAlert.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				4B4B158F26CC69130042F22A /* ComicView.swift in Sources */,
 				4B4B15ED26CC71CC0042F22A /* XkcdComicConstants.swift in Sources */,
 				4B4B158D26CC69130042F22A /* XkcdComicApp.swift in Sources */,
+				4BD1817B26D5B00800DC16F0 /* ErrorAlert.swift in Sources */,
 				4B4B15D126CC6A5D0042F22A /* ComicModel.swift in Sources */,
 				4B4B15DA26CC6C650042F22A /* XkcdEndpoint.swift in Sources */,
 			);
